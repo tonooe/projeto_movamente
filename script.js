@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('click', () => {
             const modalId = card.getAttribute('data-modal');
             const modal = document.getElementById(modalId);
-            console.log(modalId, 'adsadsadsa')
+            console.log(modalId)
             if (modal) {
                 modal.showModal();
                 overlay?.classList.add('active');
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-  // Função para fechar modal
+    // Função para fechar modal
     function closeModal(modal) {
         if (modal && modal.open) {
         modal.close();
@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Selecionar a atividade automaticamente
     openButtons.forEach(button => {
         button.addEventListener('click', () => {
             const modalId = button.getAttribute('data-modal');
