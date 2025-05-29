@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovaMente | 1ª Edição</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="hero-content">
+                <img src="logo.svg" alt="Logo MovaMente" class="logo" />
+                <h1>Cuidar da mente também é <strong>qualidade de vida</strong></h1>
+                <p>Participe da 1ª edição do nosso projeto comunitário que une saúde mental e atividade física com orientação de profissionais da área.</p>
+                <a href="#atividades" class="btn-principal">Quero saber mais</a>
+            </div>
+            <div class="image-content">
+                <img src="casal-saudavel.png" alt="Casal saudável" class="header-img" />
+            </div>
+        </div>
+    </header>
+
+    <section id="sobre">
+        <h2>Um projeto pela sua mente, seu corpo e sua comunidade</h2>
+        <p class="descricao">A saúde mental é essencial para o nosso bem-estar. Nesta 1ª edição do projeto comunitário, profissionais da saúde promovem uma jornada de autoconhecimento e equilíbrio emocional por meio de atividades físicas acessíveis. As oficinas são gratuitas — com exceção da corrida beneficente, que arrecadará fundos para manter e expandir o projeto.</p>
+    </section>
+
+    <section id="atividades">
+        <div class="cards">
+            <div class="card" data-modal="modalCorrida" onclick="document.getElementById('modalCorrida').showModal()">
+                <img src="icone-corrida.svg" alt="Corrida"/>
+                <h3>Corrida beneficente</h3>
+                <p>O movimento que transforma a sua vida.</p>
+            </div>
+
+            <div class="card" data-modal="modalDanca" onclick="document.getElementById('modalDanca').showModal()">
+                <img src="icone-danca.svg" alt="Dança"/>
+                <h3>Oficina de dança</h3>
+                <p>Mexa o corpo e liberte a sua mente.</p>
+            </div>
+
+            <div class="card" data-modal="modalMeditacao" onclick="document.getElementById('modalMeditacao').showModal()">
+                <img src="icone-meditacao.svg" alt="Meditação"/>
+                <h3>Oficina de meditação</h3>
+                <p>Uma pausa para você, seu ponto de equilíbrio.</p>
+            </div>
+        </div>
+
+        <dialog id="modalCorrida" class="modal-atividade">
+            <img src="icone-corrida.svg" alt="Corrida"/>
+            <h2>Corrida beneficente</h2>
+            <p>Junte-se a nós em uma corrida leve, voltada para todas as idades, e ajude a manter este projeto vivo! A inscrição tem valor simbólico e todo o dinheiro arrecadado será revertido para ampliar ações de saúde mental na comunidade.</p>
+            <ul>
+                <div>Local: Parque Central da Cidade</div>
+                <div>Data: 12 de Junho, às 8h</div>
+                <div>Contribuição: R$ 20,00 (valor simbólico)</div>
+            </ul>
+            <button class="btn-inscricao" data-modal="modalInscricao">Me inscrever agora mesmo!</button>
+            <button class="fechar" onclick="document.getElementById('modalCorrida').close()">X</button>
+        </dialog>
+
+        <dialog id="modalDanca" class="modal-atividade">
+            <img src="icone-danca.svg" alt="Dança"/>
+            <h2>Oficina de dança</h2>
+            <p>A dança é uma poderosa ferramenta para aliviar o estresse, melhorar o humor e promover conexões. Nossa oficina é aberta para todos, sem necessidade de experiência prévia!</p>
+            <ul>
+                <div>Local: Centro Cultural Comunitário</div>
+                <div>Data: 14 de Junho, às 18h</div>
+                <div>Público-alvo: Todas as idades</div>
+            </ul>
+            <button class="btn-inscricao" data-modal="modalInscricao">Me inscrever agora mesmo!</button>
+            <button class="fechar" onclick="document.getElementById('modalDanca').close()">X</button>
+        </dialog>
+
+        <dialog id="modalMeditacao" class="modal-atividade">
+            <img src="icone-meditacao.svg" alt="Meditação"/>
+            <h2>Oficina de meditação</h2>
+            <p>A meditação pode ser um ponto de equilíbrio em meio ao caos. Nesta oficina, com apoio de um profissional da saúde mental, você aprenderá técnicas básicas para acalmar a mente e reduzir a ansiedade.</p>
+            <ul>
+                <div>Local: Centro Cultural Comunitário</div>
+                <div>Data: 16 de Junho, às 15h</div>
+                <div>Traga seu colchonete ou almofada</div>
+            </ul>
+            <button class="btn-inscricao" data-modal="modalInscricao">Me inscrever agora mesmo!</button>
+            <button class="fechar" onclick="document.getElementById('modalMeditacao').close()">X</button>
+        </dialog>
+
+        <dialog id="modalInscricao" class="modal-atividade">
+            <h2>Inscreva-se agora mesmo</h2>
+            <p>Garanta sua vaga em uma das nossas oficinas gratuitas!</p>
+            <form id="formulario">
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="atividade">Atividade de interesse:</label>
+                <select id="atividade" name="atividade" required>
+                    <option value="">Selecione</option>
+                    <option value="corrida">Corrida beneficente</option>
+                    <option value="danca">Oficina de dança</option>
+                    <option value="meditacao">Oficina de meditação</option>
+                </select>
+
+                <button type="submit" class="btn-form">Enviar inscrição</button>
+                <button type="button" class="fechar-modal">Cancelar</button>
+            </form>
+        </dialog>
+
+        <button class="btn-inscricao" data-modal="modalInscricao">Me inscrever agora mesmo!</button>
+    </section>
+
+    <footer>
+        <p class="pfooter">Projeto comunitário sem fins lucrativos • MovaMente – 1ª Edição<br />
+        Com apoio de profissionais voluntários da saúde e da comunidade.<br />
+        Porque cuidar da mente é um ato de amor.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
